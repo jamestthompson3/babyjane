@@ -44,7 +44,7 @@ if (cluster.isMaster) {
             messageHandler = message => {
                 return message.data && 
                     message.id !== process.pid && 
-                    console.log(`message in process ${process.pid}: ${message.data}`)
+                    sendBroadcast(message)
             }
             process.on('message', messageHandler)
         })
