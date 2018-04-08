@@ -1,0 +1,16 @@
+# Baby Jane
+
+## Virtual exchange based on Jane Street
+Inpired by [[https://www.youtube.com/watch?v=b1e4t2k2KJY&t=2s][this talk]]. Let's make some trading robots.
+
+## Layers
+The exchange is broken down into three layers, they are the Matching, Communication, and Client layers.
+
+### Communication Layer
+A NodeJS socket used to communicate messages between the Matching layer and the clients.
+
+### Matching Layer
+A matching engine built in OCaml
+
+### Client Layer
+Can be written in any language, they connect to the communication layer and recieve information being broadcast by the Matching layer
