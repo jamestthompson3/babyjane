@@ -10,7 +10,7 @@ The exchange is broken down into three layers, they are the Matching, Communicat
 A NodeJS socket used to communicate messages between the Matching layer and the clients.
 
 ### Matching Layer
-A matching engine built in OCaml
+A matching engine built in Rust
 
 ### Client Layer
 Can be written in any language, they connect to the communication layer and recieve information being broadcast by the Matching layer
