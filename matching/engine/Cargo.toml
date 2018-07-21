@@ -6,3 +6,6 @@ authors = ["jamestthompson3 <jamestthompson3@gmail.com>"]
 [dependencies]
 ws = "0.7.6"
 env_logger = "0.5.10"
+serde_json = "*"
+serde_derive = "*"
+serde = "*"
