@@ -13,10 +13,13 @@ pub struct RequestAction {
 }
 
 pub fn decode_text(text: &str) -> Result<(), Error> {
+    println!("{}", text);
+    // FIXME
     let p: RequestAction = serde_json::from_str(text)?;
-    println!(
-        "text decoded {} requested at {} price and {} quantity",
-        p.class, p.price, p.quantity
-    );
+    println!("made it past request action creation");
+    // println!(
+    //     "text decoded {} requested at {} price and {} quantity",
+    //     p.class, p.price, p.quantity
+    // );
     Ok(())
 }

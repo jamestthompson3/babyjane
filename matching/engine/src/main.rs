@@ -14,11 +14,9 @@ fn main() {
         // The handler needs to take ownership of out, so we use move
         move |msg: Message| {
             let is_text = &msg.is_text();
-            let text = &msg.as_text().unwrap();
             if *is_text {
-                println!("message is text");
-                println!("text is {}", *text);
-            // engine::decode_text(text);
+                let text = &msg.as_text().unwrap();
+                engine::decode_text(text).unwrap();
             // println!("message receieved as text, {}", msg);
             } else {
                 println!("message receieved, {}", msg);
